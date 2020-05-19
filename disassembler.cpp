@@ -10,7 +10,7 @@ long getFileSize(const std::string& fileLocation){
 
     // "stat" is a separate function entirely. It gets file info
     // and puts it into the struct.
-    int returnCode = stat(fileLocation.c_str(), &fileInfoAggregate);
+    int returnCode{stat(fileLocation.c_str(), &fileInfoAggregate)};
 
     if (returnCode == 0){
         return fileInfoAggregate.st_size; // Size of file (bytes)
@@ -20,28 +20,35 @@ long getFileSize(const std::string& fileLocation){
     }
 }
 
-void readFileToBuffer(const std::string& fileLocation, long fileSizeInBytes, uint8_t* buffer){
+uint8_t* createBufferFromFile(const std::string& fileLocation, long fileSizeInBytes){
     std::ifstream file(fileLocation);
 
-    for (int i = 0; i < fileSizeInBytes; i++){
+    uint8_t* buffer{new uint8_t[fileSizeInBytes]};
+
+    for (int i{0}; i < fileSizeInBytes; i++){
         buffer[i] = file.get();
     }
+
+    return buffer;
 }
 
 int main(int argc, char** argv){
     std::string fileLocation{argv[1]};
     long fileSizeInBytes{getFileSize(fileLocation)};
 
-    uint8_t buffer[fileSizeInBytes];
-    readFileToBuffer(fileLocation, fileSizeInBytes, buffer);
+    // Dynamically allocated buffer
+    uint8_t* buffer{createBufferFromFile(fileLocation, fileSizeInBytes)};
     
-
     // Printing hex
     for (int i = 0; i < fileSizeInBytes; i++){
         std::cout << std::hex << (int)buffer[i] << std::dec;
     }
 
     std::cout << '\n';
+
+    // Free up memory
+    delete[] buffer;
+    buffer = nullptr;
 
     return 0;
 }
