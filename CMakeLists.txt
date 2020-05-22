@@ -6,13 +6,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 # Setup header files
 set(HEADER_FILES
     src/getFileSize/getFileSize.hpp
-    src/Buffer/Buffer.hpp)
+    src/Buffer/Buffer.hpp
+    src/writeDisassembledBufferToConsole/writeDisassembledBufferToConsole.hpp
+    config/OpcodeConfig.hpp)
 
 # Setup source files
 set(SOURCE_FILES 
     src/8080_disassembler.cpp
     src/getFileSize/getFileSize.cpp
-    src/Buffer/Buffer.cpp)
+    src/Buffer/Buffer.cpp
+    src/writeDisassembledBufferToConsole/writeDisassembledBufferToConsole.cpp)
 
 # Create executable
 add_executable(8080_disassembler ${SOURCE_FILES} ${HEADER_FILES})

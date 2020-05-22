@@ -23,10 +23,10 @@ Buffer::~Buffer(){
     delete[] heapBasedBuffer;
 }
 
-uint8_t Buffer::operator[](long byteIndex){
+uint8_t Buffer::operator[](long byteIndex) const {
     return heapBasedBuffer[byteIndex];
 }
 
-long Buffer::getFileSizeInBytes(){
+long Buffer::getFileSizeInBytes() const {
     return fileSizeInBytes;
 }

@@ -8,9 +8,9 @@ class Buffer {
         Buffer(const std::string& fileLocation);
         ~Buffer();
 
-        uint8_t operator[](long byteIndex);
+        uint8_t operator[](long byteIndex) const;
 
-        long getFileSizeInBytes();
+        long getFileSizeInBytes() const;
 
     private:
         uint8_t* heapBasedBuffer;
