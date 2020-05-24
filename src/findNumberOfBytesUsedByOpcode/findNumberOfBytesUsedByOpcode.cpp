@@ -15,6 +15,6 @@ int findNumberOfBytesUsedByOpcode(uint8_t opcode){
     bool usesThreeBytes{isOpcodePresentInMap(opcode, OpcodeConfig::threeByteOpcodes)};
 
     if (usesOneByte) return 1;
-    if (usesTwoBytes) return 2;
-    if (usesThreeBytes) return 3;
+    else if (usesTwoBytes) return 2;
+    else if (usesThreeBytes) return 3;
 }

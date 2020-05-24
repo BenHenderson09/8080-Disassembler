@@ -1,13 +1,23 @@
+#include <iostream>
 #include <string>
+#include <exception>
 #include "Buffer/Buffer.hpp"
 #include "writeDisassembledBufferToConsole/writeDisassembledBufferToConsole.hpp"
-#include "getFileSize/getFileSize.hpp"
+#include "checkFileLocationWasProvided/checkFileLocationWasProvided.hpp"
 
 int main(int argc, char** argv){
-    std::string fileLocation{argv[1]};
-    Buffer buffer(fileLocation);
+    try {
+        checkFileLocationWasProvided(argv[1]);
+        std::string fileLocation{argv[1]};
+        
+        Buffer buffer(fileLocation);
+        writeDisassembledBufferToConsole(buffer);
+    }
+    catch(const std::exception& e){
+        std::cerr << e.what() << "\n";
 
-    writeDisassembledBufferToConsole(buffer);
+        return EXIT_FAILURE;
+    }
 
     return 0;
 }

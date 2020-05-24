@@ -10,7 +10,8 @@ set(HEADER_FILES
     src/writeDisassembledBufferToConsole/writeDisassembledBufferToConsole.hpp
     src/findNumberOfBytesUsedByOpcode/findNumberOfBytesUsedByOpcode.hpp
     src/outputDisassembledOpcode/outputDisassembledOpcode.hpp
-    config/OpcodeConfig.hpp)
+    config/OpcodeConfig.hpp
+    src/checkFileLocationWasProvided/checkFileLocationWasProvided.hpp)
 
 # Setup source files
 set(SOURCE_FILES 
@@ -19,7 +20,8 @@ set(SOURCE_FILES
     src/Buffer/Buffer.cpp
     src/writeDisassembledBufferToConsole/writeDisassembledBufferToConsole.cpp
     src/findNumberOfBytesUsedByOpcode/findNumberOfBytesUsedByOpcode.cpp
-    src/outputDisassembledOpcode/outputDisassembledOpcode.cpp)
+    src/outputDisassembledOpcode/outputDisassembledOpcode.cpp
+    src/checkFileLocationWasProvided/checkFileLocationWasProvided.cpp)
 
 # Create executable
 add_executable(8080_disassembler ${SOURCE_FILES} ${HEADER_FILES})

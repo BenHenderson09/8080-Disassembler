@@ -15,6 +15,6 @@ long getFileSize(const std::string& fileLocation){
         return fileInfoAggregate.st_size; // Size of file (bytes)
     }
     else if (returnCode == -1){
-        throw std::runtime_error("Can't determine file size");
+        throw std::runtime_error("Can't determine file size, the file may not exist.");
     }
 }
