@@ -2,6 +2,7 @@
 #define OPCODE_CONFIG_HPP
 
 #include <map>
+#include <string>
 
 namespace OpcodeConfig {
     const std::map<uint8_t, std::string> oneByteOpcodes {
