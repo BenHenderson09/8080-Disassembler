@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "../Buffer/Buffer.hpp"
+#include <FileBuffer.hpp>
 #include "../../config/OpcodeConfig.hpp"
 #include "outputDisassembledOpcode.hpp"
 
@@ -8,7 +8,7 @@ namespace {
     void outputByteIndex(long byteIndex);
     void outputOpcode(uint8_t opcode);
     void outputMnemonic(uint8_t opcode, int bytesUsedByMnemonic);
-    void outputMnemonicOperands(long byteIndex, int bytesUsedByMnemonic, const Buffer& buffer);
+    void outputMnemonicOperands(long byteIndex, int bytesUsedByMnemonic, const FileBuffer& buffer);
     void setConsoleToOutputHexNumbers();
     void setConsoleToOutputMnemonic();
 
@@ -44,7 +44,7 @@ namespace {
         }
     }
 
-    void outputMnemonicOperands(long byteIndex, int bytesUsedByMnemonic, const Buffer& buffer){
+    void outputMnemonicOperands(long byteIndex, int bytesUsedByMnemonic, const FileBuffer& buffer){
         setConsoleToOutputHexNumbers();
 
         if (bytesUsedByMnemonic == 2){
@@ -78,7 +78,7 @@ namespace {
     }
 }
 
-void outputDisassembledOpcode(const Buffer& buffer, long byteIndex, int bytesUsedByOpcode){
+void outputDisassembledOpcode(const FileBuffer& buffer, long byteIndex, int bytesUsedByOpcode){
     uint8_t opcode{buffer[byteIndex]};
 
     // Raw data from the buffer

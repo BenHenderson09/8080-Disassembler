@@ -1,8 +1,8 @@
 #ifndef OUTPUT_DISASSEMBLED_OPCODE_HPP
 #define OUTPUT_DISASSEMBLED_OPCODE_HPP
 
-#include "../Buffer/Buffer.hpp"
+#include <FileBuffer.hpp>
 
-void outputDisassembledOpcode(const Buffer& buffer, long byteIndex, int bytesUsedByOpcode);
+void outputDisassembledOpcode(const FileBuffer& buffer, long byteIndex, int bytesUsedByOpcode);
 
 #endif

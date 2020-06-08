@@ -1,10 +1,10 @@
 #include <iostream>
+#include <FileBuffer.hpp>
 #include "../findNumberOfBytesUsedByOpcode/findNumberOfBytesUsedByOpcode.hpp"
 #include "../outputDisassembledOpcode/outputDisassembledOpcode.hpp"
-#include "../Buffer/Buffer.hpp"
 #include "writeDisassembledBufferToConsole.hpp"
 
-void writeDisassembledBufferToConsole(const Buffer& buffer){
+void writeDisassembledBufferToConsole(const FileBuffer& buffer){
     long byteIndex{0};
 
     while (byteIndex < buffer.getFileSizeInBytes()){

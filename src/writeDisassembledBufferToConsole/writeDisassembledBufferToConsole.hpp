@@ -1,8 +1,8 @@
 #ifndef WRITE_DISASSEMBLED_BUFFER_TO_CONSOLE_HPP
 #define WRITE_DISASSEMBLED_BUFFER_TO_CONSOLE_HPP
 
-#include "../Buffer/Buffer.hpp"
+#include <FileBuffer.hpp>
 
-void writeDisassembledBufferToConsole(const Buffer& buffer);
+void writeDisassembledBufferToConsole(const FileBuffer& buffer);
 
 #endif
