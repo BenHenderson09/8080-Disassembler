@@ -6,7 +6,7 @@ Disassembles a binary executable designed for the Intel 8080 microprocessor back
  - Built with CMake
  - No third party libraries
  
- ## Setup
+## Setup
  Setup is fairly simple, following the standard method with CMake. Run as root.
  1. `git clone https://github.com/BenHenderson09/8080-Disassembler`
  2. `mkdir -p 8080-Disassembler/build && cd 8080-Disassembler/build`
@@ -14,10 +14,10 @@ Disassembles a binary executable designed for the Intel 8080 microprocessor back
  
  Then, to disassemble a file: `./8080_disassembler <your file location>`
  
- ## Dependencies
+## Dependencies
  - `FileBuffer`, a class I made that reads files into a memory buffer. It can be found [here.](https://github.com/BenHenderson09/FileBuffer)
  
- ## Example
+## Example
  Command: `./8080_disassembler space_invaders.h`
  
 Output:
