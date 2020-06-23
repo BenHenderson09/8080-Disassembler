@@ -6,8 +6,8 @@ Disassembles a binary executable designed for the Intel 8080 microprocessor back
  - Built with CMake
  - No third party libraries
  
- ## Usage
- Usage is fairly simple, following the standard method with CMake. Run as root.
+ ## Setup
+ Setup is fairly simple, following the standard method with CMake. Run as root.
  1. `git clone https://github.com/BenHenderson09/8080-Disassembler`
  2. `mkdir -p 8080-Disassembler/build && cd 8080-Disassembler/build`
  3. `cmake .. && make`
