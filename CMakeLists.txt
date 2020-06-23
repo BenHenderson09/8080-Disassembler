@@ -21,7 +21,6 @@ set(SOURCE_FILES
 add_executable(8080_disassembler ${SOURCE_FILES} ${HEADER_FILES})
 
 # Setup libraries
-include_directories(deps/FileBuffer/include)
-find_library(FILE_BUFFER FileBuffer deps/FileBuffer/lib)
+find_library(FILE_BUFFER FileBuffer lib)
 
 target_link_libraries(8080_disassembler LINK_PUBLIC ${FILE_BUFFER})

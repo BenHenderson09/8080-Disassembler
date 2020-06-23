@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include <FileBuffer.hpp>
+#include <FileBuffer/FileBuffer.hpp>
 #include "../../config/OpcodeConfig.hpp"
 #include "outputDisassembledOpcode.hpp"
 

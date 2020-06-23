@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include <FileBuffer.hpp>
+#include <FileBuffer/FileBuffer.hpp>
 #include "writeDisassembledBufferToConsole/writeDisassembledBufferToConsole.hpp"
 
 int main(int argc, char** argv){

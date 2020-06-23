@@ -1,5 +1,5 @@
 #include <iostream>
-#include <FileBuffer.hpp>
+#include <FileBuffer/FileBuffer.hpp>
 #include "../findNumberOfBytesUsedByOpcode/findNumberOfBytesUsedByOpcode.hpp"
 #include "../outputDisassembledOpcode/outputDisassembledOpcode.hpp"
 #include "writeDisassembledBufferToConsole.hpp"
