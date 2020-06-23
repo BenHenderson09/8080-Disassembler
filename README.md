@@ -14,6 +14,9 @@ Disassembles a binary executable designed for the Intel 8080 microprocessor back
  
  Then, to disassemble a file: `./8080_disassembler <your file location>`
  
+ ## Dependencies
+ - `FileBuffer`, a class I made that reads files into a memory buffer. It can be found [here.](https://github.com/BenHenderson09/FileBuffer)
+ 
  ## Example
  Command: `./8080_disassembler space_invaders.h`
  
